@@ -1,0 +1,66 @@
+// DEVELOPMENT TEST 
+### TEST FOR REVIEWS COLLECTION 
+### Get all Reviews 
+GET http://localhost:3000/reviews/
+
+### Create new Review 
+POST http://localhost:3000/reviews HTTP/1.1 
+Content-Type: application/json
+
+{
+    "productId": "prod_001",
+    "userId": "user001",
+    "rating": 5,
+    "comment": "Outstanding sound quality and comfort. Worth every penny!",
+    "createdAt": "2024-11-09T14:00:00Z"
+}
+
+
+### Update Review 
+PUT http://localhost:3000/reviews/ HTTP/1.1 
+Content-Type: application/json
+
+{
+    "productId": "prod_003",
+    "userId": "user003",
+    "rating": 5,
+    "comment": "Perfect for gaming! The RGB lighting is amazing.",
+    "createdAt": "2024-11-11T15:45:00Z"
+}
+
+### Delete Review 
+DELETE http://localhost:3000/reviews/ HTTP/1.1
+
+
+// PRODUCTION TEST 
+### TEST FOR REVIEWS COLLECTION 
+### Get all Reviews 
+GET http://cse341-ecommerce.onrender.com/reviews/
+
+### Create new Review 
+POST http://cse341-ecommerce.onrender.com/reviews HTTP/1.1 
+Content-Type: application/json
+
+{
+    "productId": "prod_002",
+    "userId": "user002",
+    "rating": 4,
+    "comment": "Great camera performance, but battery could be better.",
+    "createdAt": "2024-11-10T10:30:00Z"
+}
+
+
+### Update Review 
+PUT http://cse341-ecommerce.onrender.com/reviews/ HTTP/1.1 
+Content-Type: application/json
+
+{
+    "productId": "prod_005",
+    "userId": "user005",
+    "rating": 5,
+    "comment": "Excellent connectivity hub. All ports work flawlessly.",
+    "createdAt": "2024-11-13T19:15:00Z"
+}
+
+### Delete Review 
+DELETE http://cse341-ecommerce.onrender.com/reviews/ HTTP/1.1
