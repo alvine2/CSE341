@@ -42,10 +42,10 @@ DELETE http://localhost:3000/products/ HTTP/1.1
 // PRODUCTION TEST 
 ### TEST FOR PRODUCTS COLLECTION 
 ### Get all Products 
-GET http://cse341-ecommerce.onrender.com/products/
+GET https://cse341-9e5j.onrender.com/products/
 
 ### Create new Product 
-POST http://cse341-ecommerce.onrender.com/products HTTP/1.1 
+POST http://https://cse341-9e5j.onrender.com/products HTTP/1.1 
 Content-Type: application/json
 
 {
@@ -61,7 +61,7 @@ Content-Type: application/json
 }
 
 ### Update Product 
-PUT http://cse341-ecommerce.onrender.com/products/ HTTP/1.1 
+PUT http://https://cse341-9e5j.onrender.com/products/ HTTP/1.1 
 Content-Type: application/json
 
 {
@@ -77,4 +77,4 @@ Content-Type: application/json
 }
 
 ### Delete Product 
-DELETE http://cse341-ecommerce.onrender.com/products/ HTTP/1.1
+DELETE http://https://cse341-9e5j.onrender.com/products/ HTTP/1.1
