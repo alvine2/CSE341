@@ -17,18 +17,18 @@
   "main": "server.js",
   "scripts": {
     "test": "jest",
-    "start": "server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NadiaGomezP/CSE341-Ecommerce.git"
+    "url": "git+https://github.com/alvine2/CSE341.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/NadiaGomezP/CSE341-Ecommerce/issues"
+    "url": "https://github.com/alvine2/CSE341.git"
   },
-  "homepage": "https://github.com/NadiaGomezP/CSE341-Ecommerce#readme",
+  "homepage": "https://github.com/alvine2/CSE341.git",
   "devDependencies": {
     "jest": "^29.7.0",
     "swagger-autogen": "^2.23.7"
