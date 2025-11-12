@@ -1,0 +1,44 @@
+[
+    {
+        "userId": "user001",
+        "productIds": ["prod_001", "prod_003"],
+        "orderDate": "2024-11-08T08:30:00Z",
+        "totalAmount": 2129.98,
+        "status": "Completed"
+    },
+    {
+        "userId": "user002",
+        "productIds": ["prod_002"],
+        "orderDate": "2024-11-09T13:20:00Z",
+        "totalAmount": 279.99,
+        "status": "Shipped"
+    },
+    {
+        "userId": "user003",
+        "productIds": ["prod_004", "prod_005"],
+        "orderDate": "2024-11-10T10:15:00Z",
+        "totalAmount": 779.98,
+        "status": "Processing"
+    },
+    {
+        "userId": "user004",
+        "productIds": ["prod_006"],
+        "orderDate": "2024-11-11T15:45:00Z",
+        "totalAmount": 1899.99,
+        "status": "Completed"
+    },
+    {
+        "userId": "user005",
+        "productIds": ["prod_007", "prod_008"],
+        "orderDate": "2024-11-12T09:00:00Z",
+        "totalAmount": 494.98,
+        "status": "Pending"
+    },
+    {
+        "userId": "user006",
+        "productIds": ["prod_009", "prod_010"],
+        "orderDate": "2024-11-13T16:30:00Z",
+        "totalAmount": 349.98,
+        "status": "Shipped"
+    }
+]

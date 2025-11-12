@@ -1,0 +1,37 @@
+[
+  {
+    "firstName": "Christopher",
+    "lastName": "Adler",
+    "email": "c.adler@mail.io",
+    "favoriteColor": "crimson",
+    "birthday": "1989-03-22"
+  },
+  {
+    "firstName": "Isabella",
+    "lastName": "Bennett",
+    "email": "i.bennett@webmail.net",
+    "favoriteColor": "teal",
+    "birthday": "1994-07-18"
+  },
+  {
+    "firstName": "Nathan",
+    "lastName": "Crawford",
+    "email": "n.crawford@email.io",
+    "favoriteColor": "navy",
+    "birthday": "1991-12-05"
+  },
+  {
+    "firstName": "Victoria",
+    "lastName": "Donnelly",
+    "email": "v.donnelly@mail.net",
+    "favoriteColor": "coral",
+    "birthday": "1993-06-14"
+  },
+  {
+    "firstName": "Jackson",
+    "lastName": "Elliott",
+    "email": "j.elliott@cloud.io",
+    "favoriteColor": "olive",
+    "birthday": "1990-09-30"
+  }
+]

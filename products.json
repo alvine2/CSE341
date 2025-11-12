@@ -1,0 +1,124 @@
+[
+    {
+        "name": "Wireless Noise Cancelling Headphones Pro",
+        "category": "Audio Equipment",
+        "description": "Premium over-ear headphones with active noise cancellation and 30-hour battery.",
+        "price": 279.99,
+        "stockQuantity": 8,
+        "brand": "AudioTech",
+        "rating": 4.9,
+        "dateAdded": "2024-11-11",
+        "isAvailable": true
+    },
+    {
+        "name": "4K Mirrorless Digital Camera",
+        "category": "Photography",
+        "description": "Professional-grade mirrorless camera with 4K video recording capability.",
+        "price": 1899.99,
+        "stockQuantity": 5,
+        "brand": "PixelPro",
+        "rating": 4.8,
+        "dateAdded": "2024-11-09",
+        "isAvailable": true
+    },
+    {
+        "name": "Mechanical Gaming Keyboard RGB",
+        "category": "Gaming Peripherals",
+        "description": "High-performance gaming keyboard with customizable RGB lighting.",
+        "price": 149.99,
+        "stockQuantity": 22,
+        "brand": "GamerGear",
+        "rating": 4.7,
+        "dateAdded": "2024-11-13",
+        "isAvailable": true
+    },
+    {
+        "name": "Portable SSD External Drive 1TB",
+        "category": "Storage",
+        "description": "Ultra-fast portable solid-state drive for backup and file transfer.",
+        "price": 129.99,
+        "stockQuantity": 18,
+        "brand": "DataVault",
+        "rating": 4.6,
+        "dateAdded": "2024-11-08",
+        "isAvailable": true
+    },
+    {
+        "name": "USB-C Hub Docking Station",
+        "category": "Connectivity",
+        "description": "Multi-port USB-C hub with HDMI, USB 3.0, and SD card reader.",
+        "price": 59.99,
+        "stockQuantity": 30,
+        "brand": "TechConnect",
+        "rating": 4.5,
+        "dateAdded": "2024-11-10",
+        "isAvailable": true
+    },
+    {
+        "name": "Wireless Gaming Mouse",
+        "category": "Gaming Peripherals",
+        "description": "Precision gaming mouse with adjustable DPI and wireless connectivity.",
+        "price": 79.99,
+        "stockQuantity": 25,
+        "brand": "GamerGear",
+        "rating": 4.8,
+        "dateAdded": "2024-11-12",
+        "isAvailable": true
+    },
+    {
+        "name": "Monitor 32 inch 4K UHD",
+        "category": "Displays",
+        "description": "Large 4K ultra HD monitor perfect for gaming and content creation.",
+        "price": 449.99,
+        "stockQuantity": 6,
+        "brand": "DisplayMax",
+        "rating": 4.7,
+        "dateAdded": "2024-11-07",
+        "isAvailable": true
+    },
+    {
+        "name": "Webcam 1080p HD Pro",
+        "category": "Video Equipment",
+        "description": "High-definition webcam with auto-focus for streaming and video calls.",
+        "price": 89.99,
+        "stockQuantity": 20,
+        "brand": "StreamPro",
+        "rating": 4.6,
+        "dateAdded": "2024-11-11",
+        "isAvailable": true
+    },
+    {
+        "name": "Laptop Stand Adjustable Aluminum",
+        "category": "Computer Accessories",
+        "description": "Ergonomic aluminum laptop stand for improved posture and airflow.",
+        "price": 44.99,
+        "stockQuantity": 35,
+        "brand": "ErgoTech",
+        "rating": 4.5,
+        "dateAdded": "2024-11-06",
+        "isAvailable": true
+    },
+    {
+        "name": "Mechanical Switch Keyboard Blue",
+        "category": "Input Devices",
+        "description": "Premium mechanical keyboard with blue switches and aluminum frame.",
+        "price": 169.99,
+        "stockQuantity": 12,
+        "brand": "KeyMaster",
+        "rating": 4.9,
+        "dateAdded": "2024-11-14",
+        "isAvailable": true
+    }
+    ,
+    {
+        "name": "Pixel Fold",
+        "category": "Smartphones",
+        "description": "Google's foldable phone with innovative design.",
+        "price": 1799.99,
+        "stockQuantity": 5,
+        "brand": "Google",
+        "rating": 4.9,
+        "dateAdded": "2024-11-18",
+        "isAvailable": true
+    }
+]
