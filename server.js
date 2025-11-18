@@ -6,7 +6,7 @@ const cors = require('cors');
 
 // Assuming your passport configuration is correctly located at ./config/passport.js
 // If your passport file is in a 'middleware' folder, change 'config' to 'middleware'.
-const passport = require('./config/passport'); 
+const passport = require('./middleware/passport'); 
 const session = require('express-session');
 
 const port = process.env.PORT || 3000;
