@@ -1,103 +1,54 @@
-require('dotenv').config();
-
 const express = require('express');
-const cors = require('cors');
-const session = require('express-session');
-const swaggerUi = require('swagger-ui-express');
-const fs = require('fs');
-const path = require('path');
-const passport = require('passport');
-
+const bodyParser = require('body-parser');
 const mongodb = require('./data/database');
-const routes = require('./routes/index.js');
+const dotenv = require('dotenv').config();
+const cors = require('cors');
+// Import the configured passport object
+const passport = require('./middleware/passport'); 
+const session = require('express-session');
 
-require('./middleware/passport');
-
+const port = process.env.PORT || 3000;
 const app = express();
-const port = process.env.PORT || 4000;
 
-const isAuthenticated = (req, res, next) => {
-    if (req.isAuthenticated()) {
-        return next();
-    }
-    res.redirect('/');
-};
+app
+    .use(bodyParser.json())
+    .use(session({
+        secret: "secret",
+        resave: false,
+        saveUninitialized: true,
+    }))
+    .use(passport.initialize())
+    .use(passport.session())
+    .use((req, res, next) => {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Access-Control-Allow-Methods', 
+            'POST, GET, PUT, PATCH, DELETE, OPTIONS'
+        );
+        next();
+    })
+    .use(cors({ methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH']}))
+    .use(cors({ origin: '*' }))
+    .use("/", require("./routes/index.js"));
 
-app.use(express.json());
-app.use(cors());
+// Route to initiate Google authentication
+app.get('/login', passport.authenticate('google', { scope: ['profile', 'email'] }));
 
-app.use(session({
-    secret: process.env.SESSION_SECRET || "secret",
-    resave: false,
-    saveUninitialized: false,
-    cookie: { secure: false } 
-}));
-
-app.use(passport.initialize());
-app.use(passport.session());
-
-// --- 🔑 UNPROTECTED ROUTES (Must be defined first) ---
-
-app.get('/auth/google',
-    passport.authenticate('google', { scope: ['profile', 'email'] }) 
-);
-
-app.get('/auth/google/callback',
-    passport.authenticate('google', { failureRedirect: '/' }),
+// Route to handle the Google Callback
+app.get('/auth/google/callback', passport.authenticate('google', {
+    failureRedirect: '/api-docs', session:false}),
     (req, res) => {
-        res.redirect('/api-docs'); 
-    }
-);
-
-app.get('/logout', (req, res, next) => {
-    req.logout((err) => {
-        if (err) {
-            return next(err);
-        }
+        req.session.user = req.user;
         res.redirect('/');
     });
-});
 
-// 🔑 Root route is defined here to ensure it's hit before the protected router.
-app.get('/', (req, res) => {
-    if (req.isAuthenticated()) {
-        res.send('<h1>Contacts API Running</h1><p>You are logged in.</p><p><a href="/api-docs">Go to Protected API Docs</a> | <a href="/logout">Logout</a></p>');
-    } else {
-        res.send('<h1>Contacts API Running</h1><p>You must <a href="/auth/google">Login with Google</a> to access the API documentation.</p>');
-    }
-});
+app.get('/',(req, res) => { res.send(req.session.user !== undefined ? `Logged in as ${req.session.user.displayName}` : `Logged Out`)});
 
-// --- Swagger Documentation (Protected) ---
 
-const swaggerPath = path.join(__dirname, 'swagger.json');
-if (fs.existsSync(swaggerPath)) {
-    const swaggerDocument = require(swaggerPath);
-    
-    const swaggerOptions = {
-        requestInterceptor: (req) => {
-            req.credentials = 'include';
-            return req;
-        }
-    };
-
-    app.use('/api-docs', isAuthenticated, swaggerUi.serve, swaggerUi.setup(swaggerDocument, swaggerOptions));
-} else {
-    console.warn('Warning: swagger.json not found at project root. /api-docs will be unavailable.');
-}
-
-// --- 🔑 PROTECTED ROUTER (Must be defined after '/') ---
-// This applies isAuthenticated to all routes in routes/index.js
-app.use('/', isAuthenticated, routes); 
-
-// --- Database Connection ---
 mongodb.initDb((err) => {
-    if (err) {
-        console.error('Failed to initialize DB:', err);
-        process.exit(1);
-    } else {
-        app.listen(port, () => {
-            console.log(`Server listening on http://localhost:${port}`);
-            console.log('Swagger UI available at /api-docs (if swagger.json present)');
-        });
+    if(err) {
+        console.log(err);
+    }
+    else {
+        app.listen(port, () =>{console.log(`Database is listening and node Running on port ${port}`)});
     }
 });
