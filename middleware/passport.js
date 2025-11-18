@@ -12,7 +12,6 @@ passport.serializeUser((user, done) => {
 
 // Used to deserialize the user from the session
 passport.deserializeUser((user, done) => {
-    // The user object retrieved here is the object stored in serializeUser
     done(null, user);
 });
 
