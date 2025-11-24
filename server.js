@@ -18,8 +18,8 @@ app
         resave: false,
         saveUninitialized: true,
         cookie: { 
+            sameSite: 'None',
             secure: true,
-            sameSite: 'None'
         }
     }))
     .use(passport.initialize())
@@ -59,6 +59,17 @@ passport.deserializeUser((user, done) => {
 
 app.get('/',(req, res) => { res.send(req.session.user !== undefined ? `Logged in as ${req.session.user.displayName}` : `Logged Out`)});
 
+app.get('/session-check', (req, res) => {
+    if (req.session.user) {
+        res.status(200).json({ 
+            status: 'Success', 
+            user: req.session.user.displayName,
+            message: 'Session is active and user is recognized.'
+        });
+    } else {
+        res.status(401).json({ status: 'Failure', message: 'Session is NOT active.' });
+    }
+});
 
 app.get('/callback', passport.authenticate('github', {
     failureRedirect: '/api-docs', session: true}), 
