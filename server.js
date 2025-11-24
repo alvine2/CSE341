@@ -1,6 +1,4 @@
-// server.js (UPDATED FOR RENDER DEPLOYMENT)
-
-require('dotenv').config(); // MUST BE THE FIRST LINE
+require('dotenv').config();
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -14,40 +12,29 @@ const port = process.env.PORT || 3000;
 const app = express();
 
 app
-    // -----------------------------------------------------------------
-    // 🚨 FIX 1: SESSION CONFIGURATION FOR HTTPS DEPLOYMENT
-    // We use SESSION_SECRET from the environment and set secure/sameSite for Render.
-    // -----------------------------------------------------------------
     .use(bodyParser.json())
     .use(session({
-        secret: process.env.SESSION_SECRET || "a-long-random-fallback-secret-key", // 🚨 Use ENV variable!
+        secret: process.env.SESSION_SECRET || "a-long-random-fallback-secret-key",
         resave: false,
         saveUninitialized: true,
         cookie: { 
-            secure: true,   // MUST BE TRUE for HTTPS (Render)
-            sameSite: 'None' // Allows cookie to be sent cross-domain
+            secure: true,
+            sameSite: 'None'
         }
     }))
     .use(passport.initialize())
     .use(passport.session())
-    
-    // -----------------------------------------------------------------
-    // FIX 2: CONSOLIDATED AND CORRECT CORS CONFIGURATION
-    // Credentials: true allows the browser to send the session cookie back.
-    // -----------------------------------------------------------------
     .use(cors({
-        origin: '*', // Allows access from any origin
+        origin: '*',
         methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-        credentials: true // 🚨 CRITICAL: Allows browser to send session cookie
+        credentials: true
     }))
     .use((req, res, next) => {
-        // Redundant Access-Control headers are now generally handled by the cors() middleware above, 
-        // but kept here for fallback, using the secure headers.
         res.setHeader('Access-Control-Allow-Origin', '*');
         res.setHeader('Access-Control-Allow-Methods', 
             'POST, GET, PUT, PATCH, DELETE, OPTIONS'
         );
-        res.setHeader('Access-Control-Allow-Credentials', 'true'); // Required with credentials: true
+        res.setHeader('Access-Control-Allow-Credentials', 'true');
         next();
     })
     .use("/", require("./routes/index.js"));
@@ -72,17 +59,13 @@ passport.deserializeUser((user, done) => {
 
 app.get('/',(req, res) => { res.send(req.session.user !== undefined ? `Logged in as ${req.session.user.displayName}` : `Logged Out`)});
 
-// -----------------------------------------------------------------
-// 🚨 FIX 3: PASSPORT CALLBACK SESSION FLAG
-// MUST be true to allow Passport to manage the user session.
-// -----------------------------------------------------------------
-app.get('/github/callback', passport.authenticate('github', {
-    failureRedirect: '/api-docs', session: true}), // 🚨 Changed to session: true
+
+app.get('/callback', passport.authenticate('github', {
+    failureRedirect: '/api-docs', session: true}), 
     (req, res) => {
         req.session.user = req.user;
         res.redirect('/');
     });
-// -----------------------------------------------------------------
 
 
 mongodb.initDb((err) => {
