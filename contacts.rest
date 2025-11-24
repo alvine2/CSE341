@@ -4,7 +4,7 @@
 GET http://localhost:3000/contacts/
 
 ### Get contact by id
-GET http://localhost:3000/contacts/67510ca4b2e070c991a8348d
+GET http://localhost:3000/contacts/
 
 ### Create new Contact 
 POST http://localhost:3000/contacts HTTP/1.1 
@@ -19,7 +19,7 @@ Content-Type: application/json
 }
 
 ### Update Contact 
-PUT http://localhost:3000/contacts/67510ca4b2e070c991a8348d HTTP/1.1 
+PUT http://localhost:3000/contacts/
 Content-Type: application/json
 
 {
@@ -31,7 +31,7 @@ Content-Type: application/json
 }
 
 ### Delete Contact 
-DELETE http://localhost:3000/contacts/67510ca4b2e070c991a8348d HTTP/1.1
+DELETE http://localhost:3000/contacts/
 
 
 // PRODUCTION TEST 
@@ -40,7 +40,7 @@ DELETE http://localhost:3000/contacts/67510ca4b2e070c991a8348d HTTP/1.1
 GET https://cse341-9e5j.onrender.com/contacts/
 
 ### Get contact by id
-GET https://cse341-9e5j.onrender.com/contacts/67510ca4b2e070c991a8348d
+GET https://cse341-9e5j.onrender.com/contacts/
 
 ### Create new Contact 
 POST https://cse341-9e5j.onrender.com/contacts HTTP/1.1 
@@ -55,7 +55,7 @@ Content-Type: application/json
 }
 
 ### Update Contact 
-PUT https://cse341-9e5j.onrender.com/contacts/67510ca4b2e070c991a8348d HTTP/1.1 
+PUT https://cse341-9e5j.onrender.com/contacts/
 Content-Type: application/json
 
 {
@@ -67,4 +67,4 @@ Content-Type: application/json
 }
 
 ### Delete Contact 
-DELETE https://cse341-9e5j.onrender.com/contacts/67510ca4b2e070c991a8348d HTTP/1.1
+DELETE https://cse341-9e5j.onrender.com/contacts/

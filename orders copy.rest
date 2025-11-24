@@ -1,0 +1,89 @@
+// DEVELOPMENT TEST 
+### TEST FOR PRODUCTS COLLECTION 
+
+### Get all Orders
+GET http://localhost:3000/orders/
+
+### Get a Single Order 
+GET http://localhost:3000/orders/675a0d39354bb9678a73e6cf
+
+
+### Create New Order
+POST http://localhost:3000/orders HTTP/1.1
+Content-Type: application/json
+
+{
+    "userId": "user002", 
+    "productIds": ["prod_001", "prod_003"],
+    "orderDate": "2024-11-09T13:20:00Z", 
+    "totalAmount": "2129.98", 
+    "status": "Shipped"
+}
+
+
+### Update Order
+PUT http://localhost:3000/orders/67510d4bb2e070c991a834a0 HTTP/1.1
+Content-Type: application/json
+
+{
+    "userId": "user004", 
+    "productIds": ["prod_002", "prod_005"],
+    "orderDate": "2024-11-11T15:45:00Z", 
+    "totalAmount": 1899.99, 
+    "status": "Completed"
+}
+
+### Delete Order
+DELETE http://localhost:3000/orders/:id HTTP/1.1
+
+### Get Products for Order
+GET http://localhost:3000/orders/products/67510d4bb2e070c991a834a0
+
+### Get all Orders for a User
+GET http://localhost:3000/orders/user/user005
+
+
+// Production TEST 
+### TEST FOR PRODUCTS COLLECTION 
+
+### Get all Orders
+GET https://cse341-9e5j.onrender.com/orders/
+
+### Get a Single Order 
+GET https://cse341-9e5j.onrender.com/orders/675a0d39354bb9678a73e6cf
+
+
+### Create New Order
+POST https://cse341-9e5j.onrender.com/orders HTTP/1.1
+Content-Type: application/json
+
+{
+    "userId": "user003", 
+    "productIds": ["prod_004", "prod_006"],
+    "orderDate": "2024-11-10T10:15:00Z", 
+    "totalAmount": 779.98, 
+    "status": "Processing"
+}
+
+
+### Update Order
+PUT https://cse341-9e5j.onrender.com/orders/67510d4bb2e070c991a834a0 HTTP/1.1
+Content-Type: application/json
+
+{
+    "userId": "user006", 
+    "productIds": ["prod_007", "prod_009"],
+    "orderDate": "2024-11-13T16:30:00Z", 
+    "totalAmount": 349.98, 
+    "status": "Shipped"
+}
+
+### Delete Order
+DELETE https://cse341-9e5j.onrender.com/orders/:id HTTP/1.1
+
+### Get Products for Order
+GET https://cse341-9e5j.onrender.com/orders/products/67510d4bb2e070c991a834a0
+
+### Get all Orders for a User
+GET https://cse341-9e5j.onrender.com/orders/user/user006
+

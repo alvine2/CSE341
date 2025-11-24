@@ -1,15 +1,31 @@
-# # Temple API
+# E Commerce App
 
-This API is intended for a team assignment in CSE 341 to learn how to use Swagger for API Documentation.
+## Randomized production URL
 
-## Instructions to run application
+👉 https://cse341-ecommerce.onrender.com/api-docs
 
-- Run npm install in the terminal
-- node server.js
+## Table of Contents
 
-## Things to look out for
+- [Description](#-description)
+- [Setup](#-setup)
+- [Other commands](#-other-commands)
+- [Collaborator](#-collaborators)
 
-- Examine the routes and try a couple with your rest client.
-- If you try to run it, you'll get an authentication error from MongoDB.
-- Modify your .env file to include your mongoDB username and your db password.
-- Import the temples.json file into your mongoDB database in a new collection called temples.
+## 📚 Description
+
+This is a university final project for course CSE 341 Web Sevices.
+
+## 🛠️ Setup
+
+- `npm install`
+- `node server.js` starts up a local server and updates on any JS or CSS/SCSS changes.
+
+## 🔩 Other commands
+
+- `node swagger.js` to build the swagger json file.
+
+## 👾 Collaborator
+
+- Gabriel Yanqui
+- Nadia Peralta
+- Pedro Zelada
