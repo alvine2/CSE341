@@ -3,6 +3,16 @@ const router = require('express').Router();
 
 router.get('/login', passport.authenticate('github'), (req, res) => {});
 
+
+router.get('/callback', 
+    passport.authenticate('github', { failureRedirect: '/login' }),
+    (req, res) => {
+        // Upon successful authentication, redirect the user to the home page.
+        res.redirect('/');
+    }
+);
+// --- END: ADDED CALLBACK HANDLER ---
+
 router.get('/logout', function(req, res, next) {
     req.logout(function(err) {
         if (err) { return next(err); }

@@ -5,7 +5,7 @@ const doc = {
     title: 'QuickCart  API',
     description: 'API for managing users, products, orders and reviews',
   },
-  host: 'localhost:3000',
+  host: 'cse341-9e5j.onrender.com',
   schemes: ['https', 'http'],
 };
 
