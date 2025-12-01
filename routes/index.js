@@ -3,8 +3,15 @@ const router = require('express').Router();
 
 router.get('/login', passport.authenticate('github'), (req, res) => {});
 
-// REMOVED: The /callback route handler was duplicated and is correctly defined 
-// in server.js to include session setup (req.session.user = req.user;).
+router.get('/callback', 
+    passport.authenticate('github', { failureRedirect: '/' }),
+    (req, res) => {
+        if (req.user) {
+            req.session.user = req.user; 
+        }
+        res.redirect('/'); 
+    }
+);
 
 router.get('/logout', function(req, res, next) {
     req.logout(function(err) {
@@ -12,8 +19,7 @@ router.get('/logout', function(req, res, next) {
         res.redirect('/');
     });
 });
-// FIX: Changing from '/' to the standard '/api-docs' path for Swagger.
-// The previous error suggests require('./swagger') was not exporting a router function.
+
 router.use('/api-docs', require('./swagger'));
 router.get('/', (req, res) => {
     res.send(req.session.user !== undefined ? `Logged in as ${req.session.user.displayName}` : "Logged Out");
