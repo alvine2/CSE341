@@ -1,23 +1,21 @@
 const passport = require('passport');
 const router = require('express').Router();
 
-router.get('/login', passport.authenticate('github'), (req, res) => {});
 
-router.get('/callback', 
-    passport.authenticate('github', { failureRedirect: '/' }),
-    (req, res) => {
-        if (req.user) {
-            req.session.user = req.user; 
-        }
-        res.redirect('/'); 
-    }
-);
+router.get('/login', passport.authenticate('github'));
 
-router.get('/logout', function(req, res, next) {
-    req.logout(function(err) {
-        if (err) { return next(err); }
-        res.redirect('/');
+router.get('/logout', (req, res, next) => {  
+  req.logout(err => {
+    if (err) return next(err);  
+    req.session.destroy(() => { 
+      res.clearCookie('connect.sid', {
+        path: '/', 
+        httpOnly: true, 
+        sameSite: 'lax'
+      });    
+      res.redirect('/');
     });
+  });
 });
 
 router.use('/api-docs', require('./swagger'));

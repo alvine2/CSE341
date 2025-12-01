@@ -7,20 +7,29 @@ const passport = require('passport');
 const session = require('express-session');
 const GitHubStrategy = require('passport-github2').Strategy;
 
+// --- NEW IMPORTS FOR SWAGGER/API DOCS ---
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json'); // Make sure this file exists!
+// ----------------------------------------
 
 const port = process.env.PORT || 3000;
 const app = express();
 
 app
+    // --- NEW SWAGGER UI CONFIGURATION ---
+    // Serve the API documentation at the /api-docs route
+    .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+    // ------------------------------------
     .use(express.json())
     .use(express.urlencoded({ extended: true }))
     .use(session({
-        secret: process.env.SESSION_SECRET || "a-long-random-fallback-secret-key",
+        // Using provided fallback secret
+        secret: process.env.SESSION_SECRET || "a-long-random-fallback-secret-key", 
         resave: false,
         saveUninitialized: true,
         cookie: {
             sameSite: 'None',
-            secure: true,
+            secure: true, // IMPORTANT for session cookies in a production/proxy environment
         }
     }))
     .use(passport.initialize())
@@ -71,6 +80,7 @@ app.get('/callback', passport.authenticate('github', {
 
 mongodb.initDb((err) => {
     if(err) {
+        console.error('Failed to initialize database:', err);
         process.exit(1);
     }
     else {
