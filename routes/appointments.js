@@ -4,10 +4,9 @@ const { orderValidationRules, validate } = require('../middleware/validate');
 const { isAuthenticated } = require('../middleware/authenticate');
 
 /* CRUD routes */
-router.get('/', ordersController.getAll);
-router.get('/:id', ordersController.getSingle);
-router.post('/', isAuthenticated, orderValidationRules, validate, ordersController.createAppointment);
-router.put('/:id', isAuthenticated, orderValidationRules, validate, ordersController.updateAppointment);
-router.delete('/:id', isAuthenticated, ordersController.deleteAppointment);
-
+router.get('/', appointmentsController.getAll);
+router.get('/:id', appointmentsController.getSingle);
+router.post('/', isAuthenticated, appointmentValidationRules, validate, appointmentsController.createAppointment);
+router.put('/:id', isAuthenticated, appointmentValidationRules, validate, appointmentsController.updateAppointment);
+router.delete('/:id', isAuthenticated, appointmentsController.deleteAppointment);
 module.exports = router;
