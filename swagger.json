@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "QuickCart API",
-    "description": "API for managing users, products, orders, reviews, and contacts",
+    "description": "API for managing barbers, products, appointment, reviews, and contacts",
     "version": "1.0.0"
   },
   "host": "cse341-9e5j.onrender.com",
@@ -12,10 +12,10 @@
     "http"
   ],
   "paths": {
-    "/users/": {
+    "/barbers/": {
       "get": {
         "tags": [
-          "Users"
+          "barbers"
         ],
         "description": "",
         "produces": [
@@ -29,7 +29,7 @@
       },
       "post": {
         "tags": [
-          "Users"
+          "barbers"
         ],
         "description": "",
         "parameters": [
@@ -77,10 +77,10 @@
         }
       }
     },
-    "/users/{id}": {
+    "/barbers/{id}": {
       "get": {
         "tags": [
-          "Users"
+          "barbers"
         ],
         "description": "",
         "produces": [
@@ -105,7 +105,7 @@
       },
       "put": {
         "tags": [
-          "Users"
+          "barbers"
         ],
         "description": "",
         "parameters": [
@@ -160,7 +160,7 @@
       },
       "delete": {
         "tags": [
-          "Users"
+          "barbers"
         ],
         "description": "",
         "parameters": [
@@ -380,10 +380,10 @@
         }
       }
     },
-    "/orders/": {
+    "/appointment/": {
       "get": {
         "tags": [
-          "Orders"
+          "appointment"
         ],
         "description": "",
         "produces": [
@@ -397,7 +397,7 @@
       },
       "post": {
         "tags": [
-          "Orders"
+          "appointment"
         ],
         "description": "",
         "parameters": [
@@ -442,10 +442,10 @@
         }
       }
     },
-    "/orders/{id}": {
+    "/appointment/{id}": {
       "get": {
         "tags": [
-          "Orders"
+          "appointment"
         ],
         "description": "",
         "produces": [
@@ -470,7 +470,7 @@
       },
       "put": {
         "tags": [
-          "Orders"
+          "appointment"
         ],
         "description": "",
         "parameters": [
@@ -522,7 +522,7 @@
       },
       "delete": {
         "tags": [
-          "Orders"
+          "appointment"
         ],
         "description": "",
         "parameters": [
@@ -549,10 +549,10 @@
         }
       }
     },
-    "/orders/products/{id}": {
+    "/appointment/products/{id}": {
       "get": {
         "tags": [
-          "Orders"
+          "appointment"
         ],
         "description": "",
         "parameters": [
@@ -579,10 +579,10 @@
         }
       }
     },
-    "/orders/user/{userId}": {
+    "/appointment/user/{userId}": {
       "get": {
         "tags": [
-          "Orders"
+          "appointment"
         ],
         "description": "",
         "parameters": [
@@ -1944,10 +1944,10 @@
         }
       }
     },
-    "/orders/": {
+    "/appointment/": {
       "get": {
         "tags": [
-          "Orders"
+          "appointment"
         ],
         "description": "",
         "produces": [
@@ -1961,7 +1961,7 @@
       },
       "post": {
         "tags": [
-          "Orders"
+          "appointment"
         ],
         "description": "",
         "parameters": [
@@ -2006,10 +2006,10 @@
         }
       }
     },
-    "/orders/{id}": {
+    "/appointment/{id}": {
       "get": {
         "tags": [
-          "Orders"
+          "appointment"
         ],
         "description": "",
         "produces": [
@@ -2034,7 +2034,7 @@
       },
       "put": {
         "tags": [
-          "Orders"
+          "appointment"
         ],
         "description": "",
         "parameters": [
@@ -2086,7 +2086,7 @@
       },
       "delete": {
         "tags": [
-          "Orders"
+          "appointment"
         ],
         "description": "",
         "parameters": [
@@ -2113,10 +2113,10 @@
         }
       }
     },
-    "/orders/products/{id}": {
+    "/appointment/products/{id}": {
       "get": {
         "tags": [
-          "Orders"
+          "appointment"
         ],
         "description": "",
         "parameters": [
@@ -2143,10 +2143,10 @@
         }
       }
     },
-    "/orders/user/{userId}": {
+    "/appointment/user/{userId}": {
       "get": {
         "tags": [
-          "Orders"
+          "appointment"
         ],
         "description": "",
         "parameters": [

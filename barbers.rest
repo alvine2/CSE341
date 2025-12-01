@@ -1,12 +1,12 @@
 // DEVELOPMENT TEST 
-### TEST FOR USERS COLLECTION ### Get all user 
-GET http://localhost:3000/users
+### TEST FOR barberS COLLECTION ### Get all barber 
+GET http://localhost:3000/barbers
 
-### Get user by id
-GET http://localhost:3000/users/67510ca4b2e070c991a8348d
+### Get barber by id
+GET http://localhost:3000/barbers/67510ca4b2e070c991a8348d
 
-### Create new user
-POST http://localhost:3000/users HTTP/1.1 
+### Create new barber
+POST http://localhost:3000/barbers HTTP/1.1 
 Content-Type: application/json
 
 {
@@ -18,8 +18,8 @@ Content-Type: application/json
   "createdAt": "2024-12-07"
 }
 
-### Update user
-PUT http://localhost:3000/users/7548859eeb7864d567c3a69 HTTP/1.1 
+### Update barber
+PUT http://localhost:3000/barbers/7548859eeb7864d567c3a69 HTTP/1.1 
 Content-Type: application/json
 
 {
@@ -31,5 +31,5 @@ Content-Type: application/json
   "createdAt": "2024-12-07"
 }
 
-### Delete user
-DELETE http://localhost:3000/users/7548859eeb7864d567c3a69 HTTP/1.1
+### Delete barber
+DELETE http://localhost:3000/barbers/7548859eeb7864d567c3a69 HTTP/1.1
