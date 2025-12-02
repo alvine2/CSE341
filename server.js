@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const mongodb = require('./data/database');
 const cors = require('cors');
+const bodyParser = require('body-parser');
 const passport = require('passport');
 const session = require('express-session');
 const GitHubStrategy = require('passport-github2').Strategy;
