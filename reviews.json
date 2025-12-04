@@ -3,35 +3,35 @@
         "productId": "",
         "userId": "",
         "rating": 5,
-        "comment": "Absolutely love this product! Highly recommend it.",
+        "comment": "Best haircut I've had in a long time! The barber really knows what he's doing.",
         "createdAt": "2024-12-01T14:00:00Z"
     },
     {
         "productId": "",
         "userId": "",
         "rating": 4,
-        "comment": "Great product, but the price is a bit high.",
+        "comment": "Great service, but the waiting time was a bit long.",
         "createdAt": "2024-12-02T16:30:00Z"
     },
     {
         "productId": "",
         "userId": "",
         "rating": 3,
-        "comment": "It works fine, but not as good as I expected.",
+        "comment": "The haircut was okay, but not exactly the style I wanted.",
         "createdAt": "2024-12-03T11:45:00Z"
     },
     {
         "productId": "",
         "userId": "",
         "rating": 5,
-        "comment": "Excellent quality and fast shipping!",
+        "comment": "Amazing fade and very professional barbers! Highly recommended.",
         "createdAt": "2024-12-04T08:20:00Z"
     },
     {
         "productId": "",
         "userId": "",
         "rating": 4,
-        "comment": "Good value for the price. Would buy again.",
+        "comment": "Good haircut for the price. Will definitely come back.",
         "createdAt": "2024-12-05T19:15:00Z"
     }
 ]

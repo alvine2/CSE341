@@ -1,66 +1,66 @@
 [
   {
-    "firstName": "Alice",
-    "lastName": "Johnson",
-    "email": "alice.johnson@example.com",
+    "firstName": "James",
+    "lastName": "Ouma",
+    "email": "j.ouma@barbershop.com",
     "passwordHash": "",
-    "address": "123 Main St, Springfield, IL",
+    "address": "Kampala Road, Kampala, UG",
     "createdAt": "2024-12-01"
   },
   {
-    "firstName": "Bob",
-    "lastName": "Smith",
-    "email": "bob.smith@example.com",
+    "firstName": "Peter",
+    "lastName": "Mwesige",
+    "email": "p.mwesige@barbershop.com",
     "passwordHash": "",
-    "address": "456 Elm St, Denver, CO",
+    "address": "Gulu Main Street, Gulu, UG",
     "createdAt": "2024-12-02"
   },
   {
-    "firstName": "Charlie",
-    "lastName": "Brown",
-    "email": "charlie.brown@example.com",
+    "firstName": "Samuel",
+    "lastName": "Mukasa",
+    "email": "s.mukasa@barbershop.com",
     "passwordHash": "",
-    "address": "789 Oak St, Austin, TX",
+    "address": "Namasuba Entebbe Road, Wakiso, UG",
     "createdAt": "2024-12-03"
   },
   {
-    "firstName": "Diana",
-    "lastName": "Prince",
-    "email": "diana.prince@example.com",
+    "firstName": "John",
+    "lastName": "Kato",
+    "email": "j.kato@barbershop.com",
     "passwordHash": "",
-    "address": "321 Pine St, Orlando, FL",
+    "address": "Mbale Central Market Area, Mbale, UG",
     "createdAt": "2024-12-04"
   },
   {
-    "firstName": "Eve",
-    "lastName": "Adams",
-    "email": "eve.adams@example.com",
+    "firstName": "Ronald",
+    "lastName": "Isabirye",
+    "email": "r.isabirye@barbershop.com",
     "passwordHash": "",
-    "address": "654 Maple St, Seattle, WA",
+    "address": "Wandegeya Makerere, Kampala, UG",
     "createdAt": "2024-12-05"
   },
   {
-    "firstName": "Frank",
-    "lastName": "Castle",
-    "email": "frank.castle@example.com",
+    "firstName": "Emmanuel",
+    "lastName": "Okot",
+    "email": "e.okot@barbershop.com",
     "passwordHash": "",
-    "address": "987 Birch St, Chicago, IL",
+    "address": "Lira Main Street, Lira, UG",
     "createdAt": "2024-12-06"
   },
   {
-    "firstName": "Grace",
-    "lastName": "Lee",
-    "email": "grace.lee@example.com",
+    "firstName": "Henry",
+    "lastName": "Nsubuga",
+    "email": "h.nsubuga@barbershop.com",
     "passwordHash": "",
-    "address": "213 Cedar St, Portland, OR",
+    "address": "Masaka Town, Masaka, UG",
     "createdAt": "2024-12-07"
   },
   {
-    "firstName": "Hank",
-    "lastName": "Hill",
-    "email": "hank.hill@example.com",
+    "firstName": "Daniel",
+    "lastName": "Arinaitwe",
+    "email": "d.arinaitwe@barbershop.com",
     "passwordHash": "",
-    "address": "345 Walnut St, Dallas, TX",
+    "address": "Fort Portal City, Kabarole, UG",
     "createdAt": "2024-12-08"
   }
 ]

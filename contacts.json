@@ -1,36 +1,36 @@
 [
   {
-    "firstName": "Christopher",
-    "lastName": "Adler",
-    "email": "c.adler@mail.io",
-    "favoriteColor": "crimson",
+    "firstName": "Brian",
+    "lastName": "Okello",
+    "email": "b.okello@barbershop.com",
+    "favoriteColor": "black",
     "birthday": "1989-03-22"
   },
   {
-    "firstName": "Isabella",
-    "lastName": "Bennett",
-    "email": "i.bennett@webmail.net",
+    "firstName": "Sarah",
+    "lastName": "Nambogo",
+    "email": "s.nambogo@barbershop.com",
     "favoriteColor": "teal",
     "birthday": "1994-07-18"
   },
   {
-    "firstName": "Nathan",
-    "lastName": "Crawford",
-    "email": "n.crawford@email.io",
+    "firstName": "Michael",
+    "lastName": "Kato",
+    "email": "m.kato@barbershop.com",
     "favoriteColor": "navy",
     "birthday": "1991-12-05"
   },
   {
-    "firstName": "Victoria",
-    "lastName": "Donnelly",
-    "email": "v.donnelly@mail.net",
+    "firstName": "Linda",
+    "lastName": "Adoch",
+    "email": "l.adoch@barbershop.com",
     "favoriteColor": "coral",
     "birthday": "1993-06-14"
   },
   {
-    "firstName": "Jackson",
-    "lastName": "Elliott",
-    "email": "j.elliott@cloud.io",
+    "firstName": "Joshua",
+    "lastName": "Mugisha",
+    "email": "j.mugisha@barbershop.com",
     "favoriteColor": "olive",
     "birthday": "1990-09-30"
   }
